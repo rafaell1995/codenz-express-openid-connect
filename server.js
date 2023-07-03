@@ -19,8 +19,7 @@ app.use(express.json());
 
 const config = {
   authRequired: false,
-  auth0Logout: true,
-  loginPath: '/auth'
+  auth0Logout: true
 };
 
 const port = process.env.PORT || 3000;
