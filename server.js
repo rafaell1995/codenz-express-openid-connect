@@ -24,7 +24,8 @@ const config = {
 
 const port = process.env.PORT || 3000;
 if (process.env.BASE_URL) {
-  config.baseURL = process.env.BASE_URL;
+  const baseURL = process.env.BASE_URL;
+  config.baseURL = `${baseURL}:${port}`;
 }
 if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
   config.baseURL = `http://localhost:${port}`;
